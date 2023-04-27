@@ -1,3 +1,4 @@
+#ALL IMPORTS
 import pyttsx3 #pip install pyttsx3
 import speech_recognition as sr #pip install speechRecognition
 import datetime
@@ -7,6 +8,7 @@ import os
 import smtplib
 import time
 
+#BASIC FUNCTIONS
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
@@ -62,6 +64,7 @@ user2_email='user2@gmail.com'
 user3_email='user3@gmail.com'
 #enter your own email...as per requirement.
 
+#MAIN FUNCTION
 if __name__ == "__main__":
     wishMe()
     while True:
@@ -144,3 +147,4 @@ if __name__ == "__main__":
 
         elif query=='wait' or query=='delay' or query=='one moment':
             time.sleep(15)
+#@Under Copyright act by Avisekh sabi https://github.com/avisekh3110
