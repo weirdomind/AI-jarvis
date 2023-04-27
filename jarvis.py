@@ -1,4 +1,4 @@
-#ALL IMPORTS
+#ALL IMPORTs
 import pyttsx3 #pip install pyttsx3
 import speech_recognition as sr #pip install speechRecognition
 import datetime
@@ -8,7 +8,7 @@ import os
 import smtplib
 import time
 
-#BASIC FUNCTIONS
+#BASIC FUNCTIONs
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
@@ -48,7 +48,7 @@ def takeCommand():
 
     except:
         # print(e)
-        print("Say that again please...")  
+        print("Didn't Get you, Say that again please...")  
         return 'None'
     return query
 
@@ -64,7 +64,7 @@ user2_email='user2@gmail.com'
 user3_email='user3@gmail.com'
 #enter your own email...as per requirement.
 
-#MAIN FUNCTION
+#MAIN FUNCTIONs
 if __name__ == "__main__":
     wishMe()
     while True:
