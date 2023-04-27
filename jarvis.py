@@ -7,6 +7,8 @@ import os
 import smtplib
 import time
 
+# this code requires speaker to work
+
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
