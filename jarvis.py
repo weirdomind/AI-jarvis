@@ -18,15 +18,15 @@ def speak(audio):
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
-        speak("Good Morning!")
+        speak("Let start our Day!")
 
     elif hour>=12 and hour<18:
-        speak("Good Afternoon!")   
+        speak("It's a fine day!")   
 
     else:
-        speak("Good Evening!")
+        speak("Isn't the moon lovely!")
 
-    speak("I am Jarvis Sir. Please tell me how may I help you")
+    speak("Jarvis Here!. How may I help you, Master")
 
 def takeCommand():
     #It takes microphone input from the user and returns string output
@@ -57,6 +57,7 @@ def sendEmail(to, content):
     server.login('user1@gmail.com', 'message')
     server.sendmail('user2@gmail.com', to, content)
     server.close()
+user1_email='user1@gmail.com'
 user2_email='user2@gmail.com'
 user3_email='user3@gmail.com'
 #enter your own email...as per requirement.
@@ -69,7 +70,7 @@ if __name__ == "__main__":
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
             results = wikipedia.summary(query, sentences=2)
-            speak("According to Wikipedia")
+            speak("According to the Wikipedia")
             print(results)
             speak(results)
 
@@ -87,6 +88,7 @@ if __name__ == "__main__":
             songs = os.listdir(music_dir)
             print(songs)
             os.startfile(os.path.join(music_dir, songs[0]))
+            speak("ENJOY, Remembering your Ex!")
 
         elif query=='the time':
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
@@ -108,7 +110,7 @@ if __name__ == "__main__":
                 speak("Email has been sent to "+receiver)
             except Exception as e:
                 print(e)
-                speak("Sorry. I am not able to send this email")
+                speak("Sorry. I am unable to send this email")
 
         elif query.startswith('search') and (query.endswith('in google') or query.endswith('on google')):
             url="www.google.com/search?q="
@@ -132,8 +134,8 @@ if __name__ == "__main__":
             webbrowser.open(url)
 
         elif query=='stop' or query=='exit' or query =='quit' or query=='chup':
-            speak('See you soon!')
-            print("See you soon!")
+            speak('See you soon! Master')
+            print("See you soon! Master")
             exit()
 
         elif query.startswith('repeat after me '):
